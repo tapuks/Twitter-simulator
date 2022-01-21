@@ -11,11 +11,8 @@ export default function ModalContainer(props) {
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
             closeAfterTransition 
-            
         >
             {children}
         </Modal>
-
-
     )
 }
