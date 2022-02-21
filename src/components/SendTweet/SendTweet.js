@@ -9,7 +9,7 @@ import { TWEETS_STORAGE } from "../../utils/constants" //COMO NO ES EXPORT DEFAU
 import "./SendTweet.scss"
 
 export default function SendTweet(props) {
-    const {setInfoProps} = props
+    const {setInfoProps, allTweets} = props
     
 
     const [isOpenModal, setIsOpenModal]=useState(false)
@@ -26,6 +26,11 @@ export default function SendTweet(props) {
         e.preventDefault()
         const {name, tweet} = formValue
         let allTweetsArray=[]
+
+        if(allTweets) {
+            allTweetsArray = allTweets
+        }
+
         if (!name || !tweet) {
          
             setInfoProps({
